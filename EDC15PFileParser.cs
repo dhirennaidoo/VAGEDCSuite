@@ -1585,11 +1585,11 @@ namespace VAGSuite
                 {
                     if (sh.Y_axis_length == 6 && sh.X_axis_length == 5)
                     {
-                        if (sh.Y_axis_ID == 0xC1A2)
+                        if (sh.Y_axis_ID == 0xC1A2 || sh.Y_axis_ID == 0xC1B2)
                         {
                             sh.Category = "Detected maps";
                             sh.Subcategory = "Misc";
-                            sh.Varname = "EGR temperature map [" + DetermineNumberByFlashBank(sh.Flash_start_address, newCodeBlocks) + "]";
+                            sh.Varname = "EGR compensation-by-temperature [" + DetermineNumberByFlashBank(sh.Flash_start_address, newCodeBlocks) + "]";
                             sh.X_axis_descr = "Temperature"; //IAT, ECT or Fuel temp?
                             sh.X_axis_correction = 0.1;
                             sh.X_axis_offset = -273.1;
